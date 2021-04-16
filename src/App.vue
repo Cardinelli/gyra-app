@@ -3,7 +3,9 @@
     <nav-bar/>
     <header-nav/>
     <div class="content">
-      <router-view/>
+      <transition name="slide" mode="out-in">
+        <router-view/>
+      </transition>
     </div>
   </div>
 </template>
@@ -23,6 +25,35 @@ export default {
 
 <style lang="scss">
 @import "src/assets/scss/colors.scss";
+
+/* Transitions */
+.slide-enter-active {
+  animation: slide-in 200ms ease-out forwards;
+}
+.slide-leave-active {
+  animation: slide-out 200ms ease-out forwards;
+}
+@keyframes slide-in {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-out {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+}
+
 
 html, body {
   margin: 0;
@@ -44,6 +75,6 @@ html, body {
 }
 
 .content {
-  padding: 78px 30px 30px 280px;
+  padding: 0 30px 30px 280px;
 }
 </style>

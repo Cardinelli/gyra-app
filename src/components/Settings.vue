@@ -1,13 +1,13 @@
 <template>
-  <div class="home">
+  <div class="settings">
     <page-header :title="this.$route.name"/>
-    <h1>AAAAAAAAAAAAAA</h1>
   </div>
 </template>
 
 <script>
 import PageHeader from "./shared/PageHeader";
 export default {
+  name: "Settings",
   components: {PageHeader}
 }
 </script>
