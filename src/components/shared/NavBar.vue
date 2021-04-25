@@ -2,7 +2,7 @@
   <div class="navigation-bar">
     <div class="navigation-bar-menu">
       <div class="navigation-bar-logo">
-        <h4> <span style="color: darkred"> <i class="fas fa-cat"></i> </span> Gyra</h4>
+        <h4> <span> <i class="fas fa-cat"></i> </span> Gyra</h4>
       </div>
 
       <router-link to="/home"> <span> <i class="fas fa-atom"></i> </span> Dashboard </router-link>
@@ -50,6 +50,12 @@ export default {
       margin: 30px 0;
       border-bottom: 1px solid $gray;
       width: 80%;
+
+      h4 {
+        span {
+          color: $purple;
+        }
+      }
     }
 
     a {
