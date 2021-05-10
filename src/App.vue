@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <nav-bar/>
-    <header-nav/>
-    <div class="content">
+    <nav-bar v-if="authenticated" />
+    <header-nav v-if="authenticated"/>
+    <div :class="authenticated ? 'content' : 'authenticate'">
       <transition name="slide" mode="out-in">
         <router-view/>
       </transition>
@@ -11,14 +11,20 @@
 </template>
 
 <script>
-import NavBar from "./components/shared/NavBar";
-import HeaderNav from "./components/shared/HeaderNav";
+import NavBar from "./components/shared/NavBar"
+import HeaderNav from "./components/shared/HeaderNav"
+import {mapState} from 'vuex'
 
 export default {
   name: 'App',
   components: {
     HeaderNav,
     NavBar
+  },
+  computed: {
+    ...mapState({
+      authenticated: state => state.isAuthenticated
+    })
   }
 }
 </script>
@@ -76,5 +82,11 @@ html, body {
 
 .content {
   padding: 0 30px 30px 280px;
+}
+
+.authenticate {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 </style>

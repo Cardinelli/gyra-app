@@ -7,8 +7,6 @@
       <dashboard-item/>
     </div>
     <gyra-table :items="items"/>
-    <div class="home-charts">
-    </div>
   </div>
 </template>
 
@@ -37,9 +35,6 @@ export default {
     GyraTable,
     DashboardItem,
     PageHeader
-  },
-  mounted() {
-    this.renderChart(this.data, this.options)
   },
 }
 </script>

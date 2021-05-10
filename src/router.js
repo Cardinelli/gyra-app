@@ -3,10 +3,11 @@ import Scan from "./components/Scan";
 import Statistics from "./components/Statistics";
 import Profile from "./components/Profile";
 import Settings from "./components/Settings";
+import Login from "./components/auth/Login";
 
 export const routes = [
     {
-        path: '/home',
+        path: '/',
         name: 'Dashboard',
         component: Home
     },
@@ -29,5 +30,10 @@ export const routes = [
         path: '/settings',
         name: 'Settings',
         component: Settings
+    },
+    {
+        path: '/login',
+        name: 'Login',
+        component: Login
     }
 ]
