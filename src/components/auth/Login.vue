@@ -59,13 +59,13 @@ export default {
       }
 
       this.$store.dispatch('login', formData)
-        .then(response => {
-          if (response.status && response.status === 200) {
-            this.$router.push('/')
-          } else {
-            this.errors.push(response)
-          }
-        })
+          .then(response => {
+            if (response.status && response.status === 200) {
+              this.$router.push('/')
+            } else {
+              this.errors.push(response)
+            }
+          })
     }
   }
 }
@@ -93,6 +93,7 @@ export default {
     input {
       border-radius: 5px;
     }
+
     input:focus {
       outline: none;
     }

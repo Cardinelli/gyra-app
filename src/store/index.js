@@ -27,9 +27,9 @@ export const store = new Vuex.Store({
         }
     },
     actions: {
-          login({commit}, payload) {
+        login({commit}, payload) {
             commit('setIsLoading', true)
-               return  authService.loginUser(payload)
+            return authService.loginUser(payload)
                 .then(response => {
                     commit('loginUser', response.data.auth_token)
                     commit('setIsLoading', false)
