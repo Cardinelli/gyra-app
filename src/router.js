@@ -1,6 +1,6 @@
 import Home from './components/Home'
 import Scan from "./components/Scan";
-import Statistics from "./components/Statistics";
+import Map from "./components/Map";
 import Profile from "./components/Profile";
 import Settings from "./components/Settings";
 import Login from "./components/auth/Login";
@@ -12,9 +12,9 @@ export const routes = [
         component: Home
     },
     {
-        path: '/statistics',
-        name: 'Statistics',
-        component: Statistics
+        path: '/map',
+        name: 'Map',
+        component: Map
     },
     {
         path: '/scan',

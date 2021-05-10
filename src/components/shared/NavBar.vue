@@ -7,7 +7,7 @@
 
       <router-link to="/" exact> <span> <i class="fas fa-atom"></i> </span> Dashboard </router-link>
       <router-link to="/scan"> <span> <i class="fas fa-terminal"></i> </span> Scan </router-link>
-      <router-link to="/statistics"> <span> <i class="fas fa-poll"></i> </span> Statistics </router-link>
+      <router-link to="/map"> <span> <i class="fas fa-globe"></i> </span> Map </router-link>
       <router-link to="/profile"> <span> <i class="far fa-id-card"></i> </span> Profile </router-link>
       <router-link to="/settings"> <span> <i class="fas fa-cog"></i> </span> Settings </router-link>
     </div>
