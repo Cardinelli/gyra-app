@@ -1,21 +1,31 @@
 <template>
   <div class="scan">
     <page-header :title="this.$route.name"/>
-    <div class="scan-type-selector">
-      <div class="scan-selector-item" :class="{active: selectedScans.includes('nmap')}">
-        <input id="nmap" @change="changeEvent('nmap')" type="checkbox">
-        <label for="nmap" class="fas fa-shield-alt"></label>
-      </div>
+    <div class="scan-content">
+      <div class="scan-type-selector">
+        <div class="scan-selector-item" :class="{active: selectedScans.includes('nmap')}">
+          <input id="nmap" @change="changeEvent('nmap')" type="checkbox">
+          <label for="nmap" class="fas fa-shield-alt"></label>
+        </div>
 
-      <div class="scan-selector-item" :class="{active: selectedScans.includes('whois')}">
-        <input id="whois" @change="changeEvent('whois')" type="checkbox">
-        <label for="whois" class="fas fa-server"></label>
-      </div>
+        <div class="scan-selector-item" :class="{active: selectedScans.includes('whois')}">
+          <input id="whois" @change="changeEvent('whois')" type="checkbox">
+          <label for="whois" class="fas fa-server"></label>
+        </div>
 
-      <div class="scan-selector-item" :class="{active: selectedScans.includes('xss')}">
-        <input id="xss" @change="changeEvent('xss')" type="checkbox">
-        <label for="xss" class="fas fa-user-secret"></label>
+        <div class="scan-selector-item" :class="{active: selectedScans.includes('xss')}">
+          <input id="xss" @change="changeEvent('xss')" type="checkbox">
+          <label for="xss" class="fas fa-user-secret"></label>
+        </div>
       </div>
+      <b-row class="domain-input d-flex align-items-center justify-content-around">
+        <b-col class="d-flex" sm="6">
+          <b-form-input v-model="whois" placeholder="IP / Domain"></b-form-input>
+        </b-col>
+        <b-col class="d-flex pl-0" sm-6>
+          <b-button class="btn btn-success btn-sm"> Search </b-button>
+        </b-col>
+      </b-row>
     </div>
   </div>
 </template>
@@ -47,12 +57,22 @@ export default {
 <style lang="scss" scoped>
 @import "src/assets/scss/colors";
 .scan {
-  .scan-type-selector {
-    display: flex;
+  .scan-content {
     background: $light_navy;
     margin: 15px 0;
     border-radius: 5px;
-    padding: 15px;
+    padding: 25px;
+
+    .domain-input {
+      background: $app_background;
+      margin: 12px 0;
+      padding: 15px;
+      border-radius: 5px;
+    }
+  }
+
+  .scan-type-selector {
+    display: flex;
 
     .active {
       color: $white!important;
