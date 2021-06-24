@@ -4,12 +4,18 @@ import Map from "./components/Map";
 import Profile from "./components/Profile";
 import Settings from "./components/Settings";
 import Login from "./components/auth/Login";
+import Whois from "./components/Whois";
 
 export const routes = [
     {
         path: '/',
         name: 'Dashboard',
         component: Home
+    },
+    {
+        path: '/whois',
+        name: 'Whois',
+        component: Whois
     },
     {
         path: '/map',

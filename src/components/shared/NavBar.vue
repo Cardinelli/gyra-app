@@ -2,14 +2,15 @@
   <div class="navigation-bar">
     <div class="navigation-bar-menu">
       <div class="navigation-bar-logo">
-        <h4> <span> <i class="fas fa-cat"></i> </span> Gyra</h4>
+        <h4> <span> <ion-icon name="logo-octocat"></ion-icon> </span> Gyra</h4>
       </div>
 
-      <router-link to="/" exact> <span> <i class="fas fa-atom"></i> </span> Dashboard </router-link>
-      <router-link to="/scan"> <span> <i class="fas fa-terminal"></i> </span> Scan </router-link>
-      <router-link to="/map"> <span> <i class="fas fa-globe"></i> </span> Map </router-link>
-      <router-link to="/profile"> <span> <i class="far fa-id-card"></i> </span> Profile </router-link>
-      <router-link to="/settings"> <span> <i class="fas fa-cog"></i> </span> Settings </router-link>
+      <router-link to="/" exact class="d-flex align-items-center"> <span> <ion-icon name="apps-outline"></ion-icon> </span> <h6>Dashboard</h6> </router-link>
+      <router-link to="/whois" class="d-flex align-items-center"> <span> <ion-icon name="search-outline"></ion-icon> </span><h6>Whois</h6>  </router-link>
+      <router-link to="/scan" class="d-flex align-items-center"> <span> <ion-icon name="barcode-outline"></ion-icon> </span> <h6>Scan</h6> </router-link>
+      <router-link to="/map" class="d-flex align-items-center"> <span> <ion-icon name="earth-outline"></ion-icon> </span> <h6>Map</h6> </router-link>
+      <router-link to="/profile" class="d-flex align-items-center"> <span> <ion-icon name="person-circle-outline"></ion-icon> </span> <h6>Profile</h6> </router-link>
+      <router-link to="/settings" class="d-flex align-items-center"> <span> <ion-icon name="cog-outline"></ion-icon> </span> <h6>Settings</h6> </router-link>
     </div>
   </div>
 </template>
