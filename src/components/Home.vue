@@ -24,9 +24,6 @@ export default {
         { id: 1, target: 'www.scan-target.com', dateTime: '04-04-2021 15:00', response: 'Success', Action: 'View' },
         { id: 2, target: 'www.scan-target.com', dateTime: '04-04-2021 15:00', response: 'Success', Action: 'View' },
         { id: 3, target: 'www.scan-target.com', dateTime: '04-04-2021 15:00', response: 'Success', Action: 'View' },
-        { id: 4, target: 'www.scan-target.com', dateTime: '04-04-2021 15:00', response: 'Success', Action: 'View' },
-        { id: 5, target: 'www.scan-target.com', dateTime: '04-04-2021 15:00', response: 'Success', Action: 'View' },
-        { id: 6, target: 'www.scan-target.com', dateTime: '04-04-2021 15:00', response: 'Success', Action: 'View' },
       ]
     }
   },

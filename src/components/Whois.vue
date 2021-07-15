@@ -11,6 +11,9 @@
           <b-button class="btn btn-success btn-sm"> Search </b-button>
         </b-col>
       </b-row>
+      <div class="virtual-console-wrapper">
+        <span class="console-line"> Gyra0.1@App: </span>
+      </div>
     </div>
   </div>
 </template>
@@ -22,7 +25,8 @@ export default {
   components: {PageHeader},
   data() {
     return {
-      whois: ''
+      whois: '',
+      data: [],
     }
   }
 }
@@ -37,6 +41,23 @@ export default {
       margin: 15px 0;
       border-radius: 5px;
       padding: 15px;
+
+
+      .virtual-console-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+        background-color: black;
+        border-radius: 5px;
+        color: $green;
+        min-height: 100px;
+        width: 100%;
+
+        .console-line {
+          margin: 3px 6px;
+        }
+      }
 
       input {
         border-radius: 5px;
